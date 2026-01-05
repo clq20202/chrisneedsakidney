@@ -1,0 +1,94 @@
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #333;
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Navigation styles */
+nav {
+  background-color: #6a1b9a;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+nav a {
+  color: #fff;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-size: 1em;
+}
+nav a:hover, nav a.active {
+  background-color: #8e24aa;
+}
+
+/* Heading styles */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #6a1b9a;
+}
+
+/* Gallery container */
+.media-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Individual media item */
+.media-item {
+  max-width: 300px;
+  width: 100%;
+}
+.media-item img {
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.media-item img:hover {
+  transform: scale(1.05);
+}
+
+/* Modal overlay for video popup */
+#videoModal {
+  display: none; /* hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80%;
+  max-width: 700px; /* limit maximum width */
+  height: auto;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999;
+  padding: 10px;
+  margin: auto;
+}
+
+/* Embedded iframe - smaller size for easier viewing */
+#youtubeIframe {
+  width: 100%;
+  height: 400px; /* fixed smaller height */
+  border-radius: 8px;
+}
+
+/* Larger close button for easy clicking */
+#closeBtn {
+  font-size: 2.5em;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  padding: 5px 10px;
+}

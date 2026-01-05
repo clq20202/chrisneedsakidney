@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Media</title>
+<style>
+  /* Basic styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    padding: 20px;
+  }
+
+  /* Navigation styles */
+  nav {
+    background-color: #6a1b9a;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+  }
+  nav a {
+    color: #fff;
+    padding: 14px 20px;
+    text-decoration: none;
+  }
+  nav a:hover, nav a.active {
+    background-color: #8e24aa;
+  }
+
+  h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #6a1b9a;
+  }
+
+  /* Gallery styles */
+  .media-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .media-item {
+    max-width: 300px;
+    width: 100%;
+  }
+  .media-item img {
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  .media-item img:hover {
+    transform: scale(1.05);
+  }
+
+  /* Video modal overlay */
+  #videoModal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  #videoContainer {
+    position: relative;
+    width: 80%;
+    max-width: 700px;
+  }
+  #youtubeIframe {
+    width: 100%;
+    height: 400px; /* Smaller height for easier closing */
+    border-radius: 8px;
+  }
+  #closeBtn {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 2.5em;
+    color: #fff;
+    background: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  /* Image lightbox overlay */
+  #imgLightbox {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  #imgLightboxContent {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+  }
+  #lightboxImg {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  #closeImageBtn {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 2em;
+    color: #fff;
+    background: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About Me</a>
+  <a href="lupus.html">Lupus Education</a>
+  <a href="emory.html">Emory Living Donor Program</a>
+  <a href="media.html" class="active">Media</a>
+</nav>
+
+<h1>Media Gallery</h1>
+
+<div class="media-gallery">
+  <!-- Existing images with descriptions -->
+  <div class="media-item">
+    <img src="media/GovernorandMe.jpg" alt="Me with Governor Nathan Deal at the Georgia State Capitol" onclick="openLightbox(this.src)" />
+    <p>Me with Governor Nathan Deal at the Georgia State Capitol</p>
+  </div>
+  <div class="media-item">
+    <img src="media/gclea.jpg" alt="Christopher with Kim Schofield, Dr. Sam Lim, Georgia Council on Lupus Education and Awareness" onclick="openLightbox(this.src)" />
+    <p>Christopher with Kim Schofield, Dr. Sam Lim, Georgia Council on Lupus Education and Awareness</p>
+  </div>
+  <div class="media-item">
+    <img src="media/advocatemeet.jpg" alt="Christopher Reed and other lupus advocates with U.S. Congressman Sanford Bishop" onclick="openLightbox(this.src)" />
+    <p>Christopher Reed and other lupus advocates with U.S. Congressman Sanford Bishop</p>
+  </div>
+  <div class="media-item">
+    <img src="media/whitehousemeet.jpg" alt="Christopher Reed at the White House with President Biden's Advisor and former Atlanta Mayor Keisha Lance Bottoms" onclick="openLightbox(this.src)" />
+    <p>Christopher Reed at the White House with President Biden's Advisor and former Atlanta Mayor Keisha Lance Bottoms.</p>
+  </div>
+  <div class="media-item">
+    <img src="media/Responsibleevent.jpg" alt="Christopher Reed with State Senator Nan Orrock and State Representative Kim Schofield" onclick="openLightbox(this.src)" />
+    <p>Christopher Reed with State Senator Nan Orrock and State Representative Kim Schofield at the Advocates for Responsible Care event.</p>
+  </div>
+  <div class="media-item">
+    <img src="media/Responsibleevent2.jpg" alt="Dorothy Leone Glasser and me at the Advocates for Responsible Care event" onclick="openLightbox(this.src)" />
+    <p>Dorothy Leone Glasser and me at the Advocates for Responsible Care event.</p>
+  </div>
+  <div class="media-item">
+    <img src="media/Responsibleevent3.jpg" alt="Christopher Reed and Congresswoman Lucy McBath" onclick="openLightbox(this.src)" />
+    <p>Christopher Reed and Congresswoman Lucy McBath advocating for lupus research.</p>
+  </div>
+  <!-- YouTube thumbnail to open video -->
+  <div class="media-item">
+    <img src="media/youtube_thumbnail.jpg" alt="ABC's 20/20 Segment" style="cursor:pointer" onclick="openVideo()" />
+    <p>ABC's 20/20 Chronic Headaches segment</p>
+  </div>
+</div>
+
+<!-- Image Lightbox Overlay -->
+<div id="imgLightbox">
+  <div id="imgLightboxContent">
+    <div id="closeImageBtn" onclick="closeImage()">×</div>
+    <img id="lightboxImg" src="" alt="Enlarged Image" />
+  </div>
+</div>
+
+<!-- Video modal popup -->
+<div id="videoModal">
+  <div id="videoContainer">
+    <div id="closeBtn" onclick="closeVideo()">×</div>
+    <iframe id="youtubeIframe" src="" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+
+<script>
+function openLightbox(src) {
+  document.getElementById('lightboxImg').src = src;
+  document.getElementById('imgLightbox').style.display = 'flex';
+}
+
+function closeImage() {
+  document.getElementById('imgLightbox').style.display = 'none';
+  document.getElementById('lightboxImg').src = '';
+}
+
+function openVideo() {
+  document.getElementById('videoModal').style.display = 'flex';
+  document.getElementById('youtubeIframe').src = "https://www.youtube.com/embed/1gwHrCEHK_M?autoplay=1";
+}
+
+function closeVideo() {
+  document.getElementById('videoModal').style.display = 'none';
+  document.getElementById('youtubeIframe').src = '';
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Lupus Education</title>
+<style>
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  background-color: #ffffff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navigation styles similar to main page (optional) */
+nav {
+  background-color: #6a1b9a;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+nav a {
+  color: #ffffff;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-size: 1em;
+  transition: background 0.3s;
+}
+nav a:hover {
+  background-color: #8e24aa;
+}
+nav a.active {
+  background-color: #8e24aa;
+}
+
+/* Main container */
+.content {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Heading styles */
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #6a1b9a;
+  text-align: center;
+}
+
+/* Tabs container (if needed) */
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.tab {
+  background-color: #6a1b9a;
+  color: #fff;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.tab:hover {
+  background-color: #8e24aa;
+}
+.tab.active {
+  background-color: #8e24aa;
+}
+
+/* Sections for content */
+.section {
+  display: none;
+}
+.section.active {
+  display: block;
+}
+.section h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #6a1b9a;
+  font-size: 1.75em;
+}
+.section p {
+  margin-bottom: 15px;
+  font-size: 1.1em;
+}
+
+/* Link styles inside content */
+a {
+  color: #6a1b9a;
+  text-decoration: underline;
+}
+a:hover {
+  color: #8e24aa;
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html" class="active">About Me</a>
+  <a href="lupus.html" class="active">Lupus Education</a>
+  <a href="emory.html">Emory Living Donor Program</a>
+  <a href="media.html">Media</a>
+</nav>
+
+<!-- Main Content -->
+<div class="content">
+  <h1>Lupus Education</h1>
+  <div class="section active" id="lupus-info">
+    <p>
+      Lupus is a chronic autoimmune disease where the immune system mistakenly attacks healthy tissues, leading to inflammation and damage to various parts of the body. Common symptoms include fatigue, joint pain, rash, and fever. Although there is currently no cure, early diagnosis and treatment can help manage symptoms and improve quality of life.
+    </p>
+    <p>
+      To learn more about lupus, its symptoms, treatment options, and ongoing research, goto</strong> <a href="https://www.lupus.org/resources" target="_blank" rel="noopener noreferrer">https://www.lupus.org/resources</a>.
+    </p>
+  </div>
+</div>
+
+<!-- Optional: Lightbox code for enlarging images if needed -->
+<div id="lightbox" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:9999;">
+  <img src="" alt="Enlarged Image" style="max-width:90%; max-height:90%; border-radius:8px; box-shadow:0 0 20px rgba(0,0,0,0.5);"/>
+</div>
+
+<script>
+// If you want to enable image enlarging, you can add scripts here.
+// Currently, no images to enlarge, so script is optional.
+</script>
+
+</body>
+</html>
