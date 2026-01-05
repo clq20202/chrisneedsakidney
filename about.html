@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About J. Christopher Reed</title>
+<!-- Font Awesome CDN for social icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<style>
+/* Your existing CSS styles */
+* { margin:0; padding:0; box-sizing:border-box;}
+body { font-family: Arial, sans-serif; font-size:16px; background-color:#fff; color:#333; line-height:1.6; }
+nav { background-color:#6a1b9a; display:flex; justify-content:center; padding:10px 0; }
+nav a { color:#fff; padding:14px 20px; text-decoration:none; font-size:1em; }
+nav a:hover, nav a.active { background-color:#8e24aa; }
+h1 { font-size:2em; margin-bottom:20px; color:#6a1b9a; text-align:center; }
+.tabs { display:flex; flex-wrap:wrap; justify-content:center; margin-bottom:20px; }
+.tab { background-color:#6a1b9a; color:#fff; padding:10px 15px; margin:5px; border-radius:4px; cursor:pointer; transition:background 0.3s; }
+.tab:hover { background-color:#8e24aa; }
+.tab.active { background-color:#8e24aa; }
+.section { display:none; }
+.section.active { display:block; }
+.section h2 { margin-top:20px; margin-bottom:10px; color:#6a1b9a; font-size:1.75em; }
+.section p { margin-bottom:15px; }
+.awards-gallery { display:flex; flex-wrap:wrap; gap:15px; justify-content:center; margin-top:15px; }
+.award-item { display:flex; flex-direction:column; align-items:center; cursor:pointer; }
+.award-item img { max-width:150px; border-radius:8px; transition:transform 0.2s; }
+.award-item img:hover { transform:scale(1.05); }
+.bio { overflow:hidden; margin-top:20px; }
+.bio img { float:left; max-width:240px; margin-right:15px; margin-bottom:10px; border-radius:8px; }
+@media(max-width:768px) {
+  .bio img { float:none; display:block; margin:0 auto 15px auto; }
+  .award-item { width:100%; }
+}
+/* Style for social icons container */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* space between icons */
+  margin-top: 20px;
+}
+/* Enlarge icons on hover, optional */
+.social-icons a {
+  font-size: 3em; /* larger size for icons */
+  color: #555; /* default color, can be overridden */
+  transition: color 0.3s, transform 0.3s;
+}
+.social-icons a:hover {
+  color: #000; /* darken on hover */
+  transform: scale(1.2);
+}
+#lightbox { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:9999; }
+#lightbox img { max-width:90%; max-height:90%; border-radius:8px; box-shadow:0 0 20px rgba(0,0,0,0.5); }
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html" class="active">About Me</a>
+  <a href="lupus.html">Lupus Education</a>
+  <a href="emory.html">Emory Living Donor Program</a>
+  <a href="media.html">Media</a>
+</nav>
+
+<!-- Main Content -->
+<div class="content">
+  <h1>About J. Christopher Reed</h1>
+  <!-- Tabs for sections -->
+  <div class="tabs">
+    <div class="tab active" data-section="personal">Personal Background</div>
+    <div class="tab" data-section="advocacy">Advocacy & Work</div>
+    <div class="tab" data-section="awards">Awards & Recognition</div>
+    <!-- New Social tab -->
+    <div class="tab" data-section="social">Social</div>
+  </div>
+
+  <!-- Sections for each tab -->
+  <div id="personal" class="section active">
+    <div class="bio">
+      <img src="media/crnolupus.jpg" alt="J. Christopher Reed" />
+      <p><strong>J. Christopher Reed</strong> was diagnosed with lupus at age 16, which has shaped his life and career. Despite serious health challenges, he earned honors from Georgia State University and a law degree from Tulane University. His journey has fueled his passion for public health and patient advocacy, inspiring him to work tirelessly to improve the lives of others living with autoimmune diseases.</p>
+    </div>
+  </div>
+
+  <div id="advocacy" class="section">
+    <h2>Advocacy & Work</h2>
+    <p>Christopher has dedicated his career to public health advocacy, working with organizations like the Lupus Foundation of America and the FDA. He served as Chair of the Georgia Council on Lupus Education and Awareness, developing programs for providers and patients. He also collaborates on clinical trial initiatives to increase minority participation and writes for Lupus.net. His efforts focus on improving access, clinical research, and awareness for lupus and related diseases.</p>
+  </div>
+
+  <div id="awards" class="section">
+    <h2>Awards & Recognition</h2>
+    <p>Despite living with stage 4 kidney disease, Christopher has received numerous awards, including Living Better with Lupus and the Mary Cann Award. His advocacy work has been featured on national and local media, recognizing his dedication to improving patient lives and advancing lupus research.</p>
+    <div class="awards-gallery">
+      <div class="award-item">
+        <img src="media/reward1.jpg" alt="Reward 1" class="reward-img" />
+      </div>
+      <div class="award-item">
+        <img src="media/reward2.jpg" alt="Reward 2" class="reward-img" />
+      </div>
+    </div>
+  </div>
+
+  <!-- New Social Section with icons only -->
+  <div id="social" class="section">
+    <h2>Follow Me on Social Media</h2>
+    <div class="social-icons">
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/chris.reed.774511" target="_blank" aria-label="Facebook">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <!-- Twitter -->
+      <a href="https://twitter.com/yourprofile" target="_blank" aria-label="Twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <!-- Instagram -->
+      <a href="https://instagram.com/yourprofile" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Lightbox overlay omitted for brevity -->
+<div id="lightbox">...</div>
+
+<script>
+// Tab switcher
+const tabs = document.querySelectorAll('.tab');
+const sections = document.querySelectorAll('.section');
+
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    // Remove active class from all
+    tabs.forEach(t => t.classList.remove('active'));
+    // Add active to clicked
+    tab.classList.add('active');
+    // Show the related section
+    const sectionId = tab.getAttribute('data-section');
+    sections.forEach(sec => {
+      sec.classList.remove('active');
+      if (sec.id === sectionId) {
+        sec.classList.add('active');
+      }
+    });
+  });
+});
+// Lightbox scripts omitted for brevity
+</script>
+
+</body>
+</html>
