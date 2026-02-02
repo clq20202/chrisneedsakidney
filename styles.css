@@ -43,13 +43,13 @@ nav a.active {
 h1 {
   text-align: center;
   margin-bottom: 20px;
-  color: #6a1b9a;
+  color: #fff;
 }
 
 h2 {
   margin-top: 20px;
   margin-bottom: 10px;
-  color: #6a1b9a;
+  color: #fff;
   font-size: 1.75em;
   text-align: center;
 }
@@ -155,6 +155,7 @@ footer {
   font-size: 1.05rem;
   border-left: 4px solid #a5b4fc;
 }
+
 
 
 
