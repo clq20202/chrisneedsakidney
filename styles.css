@@ -83,5 +83,79 @@ footer {
   color: #555;
 }
 
+/* ============================= */
+/* KIDNEY DONOR CAMPAIGN SECTION */
+/* ============================= */
+
+.kidney-campaign {
+  background: #0b0b12;
+  color: #ffffff;
+  padding: 80px 20px;
+  margin-top: 40px;
+  border-radius: 12px;
+}
+
+.kidney-campaign .container {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.kidney-campaign .main-title {
+  font-size: 2.8rem;
+  color: #a5b4fc; /* periwinkle */
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.kidney-campaign .sub-title {
+  font-size: 1.4rem;
+  margin-bottom: 50px;
+  font-weight: 300;
+  color: #dcdcff;
+}
+
+.kidney-campaign .info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-bottom: 60px;
+}
+
+.kidney-campaign .info-card {
+  background: #151524;
+  border: 1px solid #2a2a45;
+  border-radius: 12px;
+  padding: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kidney-campaign .info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(165, 180, 252, 0.3);
+}
+
+.kidney-campaign .info-card h3 {
+  color: #a5b4fc;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+.kidney-campaign .info-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.kidney-campaign .details {
+  background: #11111b;
+  padding: 30px;
+  border-radius: 12px;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  border-left: 4px solid #a5b4fc;
+}
+
+
 
 
