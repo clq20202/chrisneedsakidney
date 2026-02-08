@@ -103,7 +103,7 @@ footer {
 
 .kidney-campaign .main-title {
   font-size: 2.8rem;
-  color: #a5b4fc; /* periwinkle */
+  color: #663399; /* periwinkle */
   margin-bottom: 10px;
   letter-spacing: 2px;
 }
@@ -112,7 +112,7 @@ footer {
   font-size: 1.4rem;
   margin-bottom: 50px;
   font-weight: 300;
-  color: #dcdcff;
+  color: #663399;
 }
 
 .kidney-campaign .info-grid {
@@ -155,6 +155,7 @@ footer {
   font-size: 1.05rem;
   border-left: 4px solid #a5b4fc;
 }
+
 
 
 
