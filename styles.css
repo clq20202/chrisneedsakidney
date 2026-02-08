@@ -136,7 +136,7 @@ footer {
 }
 
 .kidney-campaign .info-card h3 {
-  color: #a5b4fc;
+  color: #663399;
   margin-bottom: 10px;
   font-size: 1.1rem;
   letter-spacing: 1px;
@@ -153,8 +153,9 @@ footer {
   border-radius: 12px;
   line-height: 1.8;
   font-size: 1.05rem;
-  border-left: 4px solid #a5b4fc;
+  border-left: 4px solid #663399;
 }
+
 
 
 
